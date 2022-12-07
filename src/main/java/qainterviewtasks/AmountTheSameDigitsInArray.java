@@ -1,8 +1,6 @@
 package qainterviewtasks;
 
 import java.util.HashMap;
-import java.util.Map;
-import java.util.TreeMap;
 
 public class AmountTheSameDigitsInArray {
 
@@ -11,10 +9,7 @@ public class AmountTheSameDigitsInArray {
 
         for (int i = 0; i < input.length; i++) {
             int element = input[i];
-            Integer count = dMap.get(element);
-            if (count == null) {
-                count = 0;
-            }
+            Integer count = dMap.getOrDefault(element,0);
             count++;
             dMap.put(element, count);
         }
