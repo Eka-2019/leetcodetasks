@@ -4,6 +4,8 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import qainterviewtasks.ReverseString;
 
+import java.util.Arrays;
+
 public class ReverseStringTest {
 
     @Test
@@ -13,7 +15,7 @@ public class ReverseStringTest {
         char[] actual = test.reverseCharsInExistingArray(chars);
         char[] expected = {'o', 'l', 'l', 'e', 'h'};
 
-        Assertions.assertArrayEquals(expected, actual, "Unexpected actual Array of chars. Actual array is: " + actual);
+        Assertions.assertArrayEquals(expected, actual, "Unexpected actual Array of chars. Actual array is: " + Arrays.toString(actual));
     }
 
     @Test
@@ -23,7 +25,7 @@ public class ReverseStringTest {
         char[] actual = test.reverseCharsInExistingArray(chars);
         char[] expected = {'o', 'l', 'l', ' ',  'e', 'h'};
 
-        Assertions.assertArrayEquals(expected, actual, "Unexpected actual Array of chars. Actual array is: " + actual);
+        Assertions.assertArrayEquals(expected, actual, "Unexpected actual Array of chars. Actual array is: " + Arrays.toString(actual));
     }
 
     @Test
@@ -33,7 +35,7 @@ public class ReverseStringTest {
         char[] actual = test.reverseCharsInNewArray(chars);
         char[] expected = {'o', 'l', 'l', 'e', 'h'};
 
-        Assertions.assertArrayEquals(expected, actual, "Unexpected actual Array of chars. Actual array is: " + actual);
+        Assertions.assertArrayEquals(expected, actual, "Unexpected actual Array of chars. Actual array is: " + Arrays.toString(actual));
     }
 
     @Test
@@ -43,7 +45,7 @@ public class ReverseStringTest {
         char[] actual = test.reverseCharsInExistingArray(chars);
         char[] expected = {};
 
-        Assertions.assertArrayEquals(expected, actual, "Unexpected actual Array of chars. Actual array is: " + actual);
+        Assertions.assertArrayEquals(expected, actual, "Unexpected actual Array of chars. Actual array is: " + Arrays.toString(actual));
     }
 
     @Test
@@ -53,7 +55,7 @@ public class ReverseStringTest {
         char[] actual = test.reverseCharsInNewArray(chars);
         char[] expected = {};
 
-        Assertions.assertArrayEquals(expected, actual, "Unexpected actual Array of chars. Actual array is: " + actual);
+        Assertions.assertArrayEquals(expected, actual, "Unexpected actual Array of chars. Actual array is: " + Arrays.toString(actual));
     }
 
     @Test
@@ -63,7 +65,7 @@ public class ReverseStringTest {
         char[] actual = test.reverseCharsInNewArray(chars);
         char[] expected = {' '};
 
-        Assertions.assertArrayEquals(expected, actual, "Unexpected actual Array of chars. Actual array is: " + actual);
+        Assertions.assertArrayEquals(expected, actual, "Unexpected actual Array of chars. Actual array is: " + Arrays.toString(actual));
     }
 
     @Test
@@ -73,7 +75,7 @@ public class ReverseStringTest {
         char[] actual = test.reverseCharsInExistingArray(chars);
         char[] expected = {' '};
 
-        Assertions.assertArrayEquals(expected, actual, "Unexpected actual Array of chars. Actual array is: " + actual);
+        Assertions.assertArrayEquals(expected, actual, "Unexpected actual Array of chars. Actual array is: " + Arrays.toString(actual));
     }
 
     @Test
@@ -83,7 +85,7 @@ public class ReverseStringTest {
         char[] actual = test.reverseCharsInNewArray(chars);
         char[] expected = {'h', 'a', 'n', 'n', 'a', 'H'};
 
-        Assertions.assertArrayEquals(expected, actual, "Unexpected actual Array of chars. Actual array is: " + actual);
+        Assertions.assertArrayEquals(expected, actual, "Unexpected actual Array of chars. Actual array is: " + Arrays.toString(actual));
     }
 
     @Test
@@ -93,7 +95,7 @@ public class ReverseStringTest {
         char[] actual = test.reverseCharsInNewArray(chars);
         char[] expected = {'h', 'a', ' ', 'H'};
 
-        Assertions.assertArrayEquals(expected, actual, "Unexpected actual Array of chars. Actual array is: " + actual);
+        Assertions.assertArrayEquals(expected, actual, "Unexpected actual Array of chars. Actual array is: " + Arrays.toString(actual));
     }
 
     @Test
@@ -103,7 +105,7 @@ public class ReverseStringTest {
         char[] actual = test.reverseCharsInNewArray(chars);
         char[] expected = {'h', 'a', ':', 'H'};
 
-        Assertions.assertArrayEquals(expected, actual, "Unexpected actual Array of chars. Actual array is: " + actual);
+        Assertions.assertArrayEquals(expected, actual, "Unexpected actual Array of chars. Actual array is: " + Arrays.toString(actual));
     }
 
 }
