@@ -30,4 +30,22 @@ public class DuplicateZeros {
 
         return arr;
     }
+
+    public int[] duplicateZeros(int[] arr) {
+
+        int[] new_arr = new int[arr.length];
+        for (int i = 0, k = 0; i < arr.length && k < new_arr.length; i++) {
+            if (arr[i] == 0) {
+                new_arr[k] = arr[i];
+                if (k+1 == new_arr.length) {
+                    break;
+                }
+                    new_arr[k + 1] = arr[i];
+                k++;
+            } else
+                new_arr[k] = arr[i];
+            k++;
+        }
+        return new_arr;
+    }
 }

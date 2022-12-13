@@ -9,17 +9,17 @@ import java.util.Arrays;
 public class DuplicateZeroTest {
 
     @Test
-    public void zeroPositiveTest() {
+    public void duplicateZeroViaListPositiveTest() {
         Integer[] arr = {1, 0, 2, 3, 0, 4, 5, 0};
         DuplicateZeros test = new DuplicateZeros();
         Integer[] actual = test.duplicateZerosViaList(arr);
         Integer[] expected = {1, 0, 0, 2, 3, 0, 0, 4};
 
-        Assertions.assertArrayEquals(actual, expected, "Unexpected actual array. Actual array is: " + Arrays.toString(actual));
+        Assertions.assertArrayEquals(expected, actual, "Unexpected actual array. Actual array is: " + Arrays.toString(actual));
     }
 
     @Test
-    public void zeroEvenTest() {
+    public void zeroEvenViaListTest() {
         Integer[] arr = {1, 0, 2, 0, 3, 0, 5};
         DuplicateZeros test = new DuplicateZeros();
         Integer[] actual = test.duplicateZerosViaList(arr);
@@ -29,7 +29,7 @@ public class DuplicateZeroTest {
     }
 
     @Test
-    public void zeroOddTest() {
+    public void zeroOddViaListTest() {
         Integer[] arr = {0, 1, 0, 3, 0, 4, 0, 5};
         DuplicateZeros test = new DuplicateZeros();
         Integer[] actual = test.duplicateZerosViaList(arr);
@@ -39,7 +39,7 @@ public class DuplicateZeroTest {
     }
 
     @Test
-    public void withoutZeroTest() {
+    public void withoutZeroViaListTest() {
         Integer[] arr = {1, 3, 4, 5};
         DuplicateZeros test = new DuplicateZeros();
         Integer[] actual = test.duplicateZerosViaList(arr);
@@ -49,7 +49,7 @@ public class DuplicateZeroTest {
     }
 
     @Test
-    public void duplicateZeroInTheMiddleTest() {
+    public void duplicateZeroInTheMiddleViaListTest() {
         Integer[] arr = {1, 3, 0, 0, 4, 5};
         DuplicateZeros test = new DuplicateZeros();
         Integer[] actual = test.duplicateZerosViaList(arr);
@@ -59,7 +59,7 @@ public class DuplicateZeroTest {
     }
 
     @Test
-    public void duplicateZeroAtTheBeginningTest() {
+    public void duplicateZeroAtTheBeginningViaListTest() {
         Integer[] arr = {0, 0, 1, 3, 0, 4, 5};
         DuplicateZeros test = new DuplicateZeros();
         Integer[] actual = test.duplicateZerosViaList(arr);
@@ -69,11 +69,86 @@ public class DuplicateZeroTest {
     }
 
     @Test
-    public void duplicateZeroAtTheEndTest() {
+    public void duplicateZeroAtTheEndViaListTest() {
         Integer[] arr = {1, 3, 0, 0};
         DuplicateZeros test = new DuplicateZeros();
         Integer[] actual = test.duplicateZerosViaList(arr);
         Integer[] expected = {1, 3, 0, 0};
+
+        Assertions.assertArrayEquals(expected, actual, "Unexpected actual array. Actual array is: " + Arrays.toString(actual));
+    }
+
+
+    /**
+     * Tests for the second method
+     */
+
+    @Test
+    public void duplicateZeroPositiveTest() {
+        int[] arr = {1, 0, 2, 3, 0, 4};
+        DuplicateZeros test = new DuplicateZeros();
+        int[] actual = test.duplicateZeros(arr);
+        int[] expected = {1, 0, 0, 2, 3, 0};
+
+        Assertions.assertArrayEquals(expected, actual, "Unexpected actual array. Actual array is: " + Arrays.toString(actual));
+    }
+
+    @Test
+    public void zeroEvenTest() {
+        int[] arr = {1, 0, 2, 0, 3, 0, 5};
+        DuplicateZeros test = new DuplicateZeros();
+        int[] actual = test.duplicateZeros(arr);
+        int[] expected = {1, 0, 0, 2, 0, 0, 3};
+
+        Assertions.assertArrayEquals(expected, actual, "Unexpected actual array. Actual array is: " + Arrays.toString(actual));
+    }
+
+    @Test
+    public void zeroOddTest() {
+        int[] arr = {0, 1, 0, 3, 0, 4, 0, 5};
+        DuplicateZeros test = new DuplicateZeros();
+        int[] actual = test.duplicateZeros(arr);
+        int[] expected = {0, 0, 1, 0, 0, 3, 0, 0};
+
+        Assertions.assertArrayEquals(expected, actual, "Unexpected actual array. Actual array is: " + Arrays.toString(actual));
+    }
+
+    @Test
+    public void withoutZeroTest() {
+        int[] arr = {1, 3, 4, 5};
+        DuplicateZeros test = new DuplicateZeros();
+        int[] actual = test.duplicateZeros(arr);
+        int[] expected = {1, 3, 4, 5};
+
+        Assertions.assertArrayEquals(expected, actual, "Unexpected actual array. Actual array is: " + Arrays.toString(actual));
+    }
+
+    @Test
+    public void duplicateZeroInTheMiddleTest() {
+        int[] arr = {1, 3, 0, 0, 4, 5};
+        DuplicateZeros test = new DuplicateZeros();
+        int[] actual = test.duplicateZeros(arr);
+        int[] expected = {1, 3, 0, 0, 0, 0};
+
+        Assertions.assertArrayEquals(expected, actual, "Unexpected actual array. Actual array is: " + Arrays.toString(actual));
+    }
+
+    @Test
+    public void duplicateZeroAtTheBeginningTest() {
+        int[] arr = {0, 0, 1, 3, 0, 4, 5};
+        DuplicateZeros test = new DuplicateZeros();
+        int[] actual = test.duplicateZeros(arr);
+        int[] expected = {0, 0, 0, 0, 1, 3, 0};
+
+        Assertions.assertArrayEquals(expected, actual, "Unexpected actual array. Actual array is: " + Arrays.toString(actual));
+    }
+
+    @Test
+    public void duplicateZeroAtTheEndTest() {
+        int[] arr = {1, 3, 0, 0};
+        DuplicateZeros test = new DuplicateZeros();
+        int[] actual = test.duplicateZeros(arr);
+        int[] expected = {1, 3, 0, 0};
 
         Assertions.assertArrayEquals(expected, actual, "Unexpected actual array. Actual array is: " + Arrays.toString(actual));
     }
