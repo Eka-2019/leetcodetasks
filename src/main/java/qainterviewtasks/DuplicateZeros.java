@@ -48,4 +48,23 @@ public class DuplicateZeros {
         }
         return new_arr;
     }
+
+    public int[] duplicateZerosSameList(int[] arr) {
+
+        int[] new_arr = Arrays.copyOf(arr, arr.length);
+
+        for (int i = 0, k = 0; i < new_arr.length && k < arr.length; i++) {
+            if (new_arr[i] == 0) {
+                arr[k] = new_arr[i];
+                if (k+1 == arr.length) {
+                    break;
+                }
+                arr[k + 1] = new_arr[i];
+                k++;
+            } else
+                arr[k] = new_arr[i];
+            k++;
+        }
+        return arr;
+    }
 }
