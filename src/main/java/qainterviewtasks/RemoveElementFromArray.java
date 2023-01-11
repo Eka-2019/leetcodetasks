@@ -11,8 +11,12 @@ import static java.util.stream.IntStream.of;
 
 public class RemoveElementFromArray {
     /**
-     * Given an integer array nums and an integer val, remove all occurrences of val in nums in-place. The relative order of the elements may be changed.
-     * Since it is impossible to change the length of the array in some languages, you must instead have the result be placed in the first part of the array nums. More formally, if there are k elements after removing the duplicates, then the first k elements of nums should hold the final result. It does not matter what you leave beyond the first k elements.
+     * Given an integer array nums and an integer val, remove all occurrences of val in nums in-place.
+     * The relative order of the elements may be changed.
+     * Since it is impossible to change the length of the array in some languages,
+     * you must instead have the result be placed in the first part of the array nums.
+     * More formally, if there are k elements after removing the duplicates, then the first k elements of nums should
+     * hold the final result. It does not matter what you leave beyond the first k elements.
      * Return k after placing the final result in the first k slots of nums.
      * <p>
      * Constraints:
@@ -20,7 +24,6 @@ public class RemoveElementFromArray {
      * 0 <= nums[i] <= 50
      * 0 <= val <= 100
      */
-
     public Elements removeElementViaList(int[] nums, int val) {
         List<Integer> list = of(nums).boxed().collect(Collectors.toList());
         list.removeAll(Collections.singleton(val));
