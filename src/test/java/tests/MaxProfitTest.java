@@ -1,6 +1,5 @@
 package tests;
 
-import org.apache.commons.lang3.ArrayUtils;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import qainterviewtasks.MaxProfit;
@@ -41,7 +40,7 @@ public class MaxProfitTest {
 
     @Test
     public void maxArrayTest() throws IOException {
-        File file = new File("src/test/resources/pricesArray.txt");
+        File file = new File("src/test/resources/pricesForArray.txt");
         FileReader inputFil = new FileReader(file);
         BufferedReader in = new BufferedReader(inputFil);
 
