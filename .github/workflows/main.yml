@@ -42,6 +42,8 @@ jobs:
         java-version: 18
     - name: Test with Maven
       run: mvn clean test
+    - name: Test Report with Allure
+      run: allure serve allure-results
 
   test_2:
 
