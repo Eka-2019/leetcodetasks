@@ -41,7 +41,7 @@ jobs:
       with:
         java-version: 18
     - name: Test with Maven
-      run: mvn clean test -Dtest=/src/test/java/testrunner/JUnitTestSuite.java
+      run: mvn clean test
 
   test_2:
 
